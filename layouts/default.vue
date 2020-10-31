@@ -4,5 +4,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+body {
+  @apply bg-black;
+  font-family: "Caveat", cursive;
+}
 </style>
