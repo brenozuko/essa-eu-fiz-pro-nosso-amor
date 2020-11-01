@@ -34,7 +34,7 @@ export default {
       element.scrollIntoView({block: "end", behavior: "smooth"});
       setInterval(() => {
         if (this.steps <= 3) this.steps++;
-      }, 400);
+      }, 1000);
     },
   },
 };
