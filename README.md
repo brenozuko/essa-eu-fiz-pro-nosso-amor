@@ -1,4 +1,5 @@
-# marina
+#Marina - Essa eu fiz pro nosso amor.
+## Uma carta de amor em código, para o amor da minha vida.
 
 ## Build Setup
 
