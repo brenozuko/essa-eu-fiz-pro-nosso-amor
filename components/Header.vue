@@ -13,14 +13,14 @@ export default {};
 .neon {
   color: #fff;
   animation: glow 1s ease-in-out infinite alternate;
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
   border: 1px solid #fff;
   box-shadow: 0 0 10px #fff;
-  max-width: 80%;
+  max-width: 90%;
 
 
-  @apply rounded-full mx-auto py-4 font-bold leading-tight mt-10 px-4;
+  @apply rounded-lg mx-auto py-4 font-bold leading-tight mt-10 px-4;
 
   @keyframes glow {
     from {

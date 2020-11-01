@@ -14,6 +14,15 @@
       <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
 
+    <div class="flex justify-center">
+      <audio
+        :src="
+          require('@/assets/audio/O Teatro Mágico - Você me bagunça [ÁUDIO OFICIAL].mp3')
+        "
+        controls
+      ></audio>
+    </div>
+
     <div class="py-4 mb-8">
       <p class="poem-style">- Todas as cartas de amor são ridículas</p>
       <p class="poem-style ml-3">Se não fossem ridículas</p>
@@ -36,8 +45,7 @@
       class="py-4"
     >
       <p class="homenage-style">
-        Afinal ela é única, escala e sempre vai receber atualizações de tudo que
-        somos.
+        Não há pessoa mais especial, mais querida, mais amada e com mais espaço no meu coração do que você. Tu me fez crescer, me ensinou a amar e é parte ativa na construção de tudo que sou. Eu não poderia ser mais grato.
       </p>
     </div>
 
@@ -45,14 +53,13 @@
       :class="{ 'fade-enter': showText >= 3, hidden: showText < 3 }"
       class="py-4"
     >
-      <p class="homenage-style">Obrigado por 10 anos incríveis.</p>
+      <p class="homenage-style">Obrigado por 10 anos incríveis, meu amor. <br/> De sempre, pra sempre</p>
     </div>
 
     <Arrow v-if="showText <= 3" />
 
-    <div class="py-8 flex justify-center" v-if="showText >= 4">
-      <button class="button-love">Clica Aqui</button>
-    </div>
+
+    <LoveYou  v-if="showText >= 4"/>
   </div>
 </template>
 
@@ -101,6 +108,16 @@ export default {
 
 
 <style lang="scss">
+
+
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      color: white;
+    }
+  }
+
 .fade-enter {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -118,21 +135,6 @@ export default {
   }
 }
 
-.button-love {
-  font-size: 36px;
-  box-shadow: 0 0 10px #fff;
-  transition: hover 800ms linear;
-
-  @apply bg-transparent border rounded-full p-6 px-10 border-white text-white;
-
-  &:focus {
-    @apply outline-none;
-  }
-}
-
-.button-love:hover {
-  animation: glow 3s infinite;
-}
 
 .poem-style {
   @apply text-center text-white text-2xl leading-none;
@@ -141,10 +143,11 @@ export default {
 .homenage-style {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 24px;
-  max-width: 50%;
+  font-size: 18px;
+  max-width: 80%;
+  line-height: 20px;
 
-  @apply mx-auto text-center text-white leading-tight;
+  @apply mx-auto text-center text-white;
 }
 .border-foto {
   width: 315px;
@@ -161,5 +164,14 @@ export default {
   .poem-style {
     @apply text-4xl;
   }
+
+
+  .homenage-style {
+  font-size: 24px;
+  max-width: 50%;
+
+  @apply leading-tight;
+}
+
 }
 </style>
