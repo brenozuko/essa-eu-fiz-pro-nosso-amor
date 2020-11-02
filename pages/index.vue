@@ -17,7 +17,7 @@
     <div class="flex justify-center">
       <audio
         :src="
-          require('@/assets/audio/O Teatro Mágico - Você me bagunça [ÁUDIO OFICIAL].mp3')
+          require('@/assets/audio/Perfect - Ed e Andrea.mp3')
         "
         controls
       ></audio>
