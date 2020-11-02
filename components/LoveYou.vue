@@ -31,8 +31,9 @@ export default {
   methods: {
     countSteps() {
       let element = document.getElementById("ILove");
-      element.scrollIntoView({block: "end", behavior: "smooth"});
-      setInterval(() => {
+      element.scrollIntoView({ block: "end", behavior: "smooth" });
+
+    setInterval(() => {
         if (this.steps <= 3) this.steps++;
       }, 1000);
     },
@@ -54,9 +55,6 @@ export default {
   }
 }
 
-.button-love:hover {
-  animation: glow 3s infinite;
-}
 
 .text-love {
   color: #fff;
@@ -90,5 +88,12 @@ export default {
 .container-love {
   margin-top: -78px;
   @apply flex justify-center py-16;
+}
+
+@media (min-width: 768px) {
+  .button-love:hover {
+  animation: glow 3s infinite;
+}
+
 }
 </style>
